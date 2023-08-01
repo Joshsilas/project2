@@ -1,10 +1,10 @@
 <?php
 
 class CollectionCardMaker {
-    public string $name;
-    public string $playercount;
-    public string $difficulty;
-    public string $description;
+    private string $name;
+    private string $playercount;
+    private string $difficulty;
+    private string $description;
 
     public function __construct($name, $playercount, $difficulty, $description)
     {

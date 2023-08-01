@@ -7,8 +7,8 @@ html {
 }
 
 body {
-	background-color:#e3800f;
-    margin:0px;
+	background-color: #e3800f;
+    margin: 0px;
 }
 
 header {
@@ -16,7 +16,6 @@ header {
     justify-content: center;
     margin-bottom: 30px;
 	background-color: #884c08;
-	width: 100%;
 	border: 3px solid black;
 	color: white;
 }

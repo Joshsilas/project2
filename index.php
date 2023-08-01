@@ -10,7 +10,7 @@ require_once('functions.php');
 	</head>
 	<body>
         <header>
-            <h1> Boardgame Collection </h1>
+            <h1>Boardgame Collection</h1>
         </header>
 		<div class = "container">
         	<section class = "board-game-section">			
@@ -20,7 +20,7 @@ require_once('functions.php');
 				<p> STAT 1 DESRICPTION blah blah blah blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah</p>
 			</section>	
 
-			<section class = "game">			
+			<section class = "board-game-section">			
 				<h2> NAME FROM THE DATA BASE GOES HERE </h2>
 				<p>STAT 2 PLAYER COUNT</p>
 				<p>STAT 3 DIFFICULTY</p>

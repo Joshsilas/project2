@@ -1,11 +1,16 @@
 <?php 
-require_once('functions.php');
-
+require_once('src/collectioncardmaker.php');
+$db = new PDO('mysql:host=db;dbname=boardgames', 'root', 'password');
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+$query = $db ->prepare("SELECT `name`, `description`, `playercount`, `difficulty` FROM `boardgames`");
+$query->execute();
+$boardgames = $query->fetchAll();
 ?> 
 
 <html lang="en-GB"> 
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="src/style.css">
 		<title>The board game collection</title>
 	</head>
 	<body>
@@ -13,18 +18,12 @@ require_once('functions.php');
             <h1>Boardgame Collection</h1>
         </header>
 		<div class = "container">
-        	<section class = "board-game-section">			
-				<h2> NAME FROM THE DATA BASE GOES HERE </h2>
-				<p>STAT 2 PLAYER COUNT - 2 - 4 </p>
-				<p> STAT 3 DIFFICULTY - 3</p>
-				<p> STAT 1 DESRICPTION blah blah blah blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah</p>
-			</section>	
-
-			<section class = "board-game-section">			
-				<h2> NAME FROM THE DATA BASE GOES HERE </h2>
-				<p>STAT 2 PLAYER COUNT</p>
-				<p>STAT 3 DIFFICULTY</p>
-				<p> STAT 1 DESRICPTION blah blah blah blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah</p>
-			</section>
-			</div> 
-</body>
+			<?php
+			foreach ($boardgames as $boardgame){
+				$collectionCardMaker = new CollectionCardMaker($boardgame['name'], $boardgame['playercount'], $boardgame['difficulty'], $boardgame['description']);
+				echo $collectionCardMaker->createGameCard();
+			}
+			?>
+		</div> 
+	</body>
+</html>

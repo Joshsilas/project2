@@ -15,12 +15,10 @@ require_once('functions.php');
 		<div class = "container">
 			<?php
 			foreach ($boardgames as $game){
-				echo creategamecard($game['name'], $game['playercount'], $game['difficulty'], $game['description']);
+				$collectioncardmaker = new collectioncardmaker($game['name'], $game['playercount'], $game['difficulty'], $game['description']);
+				echo $collectioncardmaker->creategamecard();
 			}
-
 			?>
 		</div> 
-</body>
-
-<?php
-
+	</body>
+</html>

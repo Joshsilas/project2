@@ -6,13 +6,27 @@ $query = $db ->prepare("SELECT `name`, `description`, `playercount`, `difficulty
 $query->execute();
 $boardgames = $query->fetchAll();
 
-function creategamecard($name, $playercount, $difficulty, $description){
+class collectioncardmaker {
+    public string $name;
+    public string $playercount;
+    public string $difficulty;
+    public string $description;
+
+public function __construct($name, $playercount, $difficulty, $description)
+{
+    $this->name =$name;
+    $this->playercount =$playercount;
+    $this->difficulty =$difficulty;
+    $this->description =$description;
+}
+public function creategamecard()
+{
     return "
     <section class = 'board-game-section'>		
-				<h2> $name </h2>
-				<p>The Player Count is $playercount players</p>
-				<p> The difficulty to learn is $difficulty/5</p>
-				<p>$description </p>
-			</section>	";
+		<h2> $this->name </h2>
+		<p>The Player Count is $this->playercount players</p>
+		<p> The difficulty to learn is $this->difficulty/5</p>
+		<p>$this->description </p>
+	</section>	";
 }
-
+}

@@ -3,7 +3,7 @@
 class CollectionCardMaker {
     private string $name;
     private string $playercount;
-    private string $difficulty;
+    private int $difficulty;
     private string $description;
 
     public function __construct(string $name,string $playercount,int $difficulty,string $description)

@@ -1,6 +1,6 @@
 <?php
 
-require('../src/collectioncardmaker.php');
+require('../src/CollectionCardMaker.php');
 
 use PHPUnit\Framework\TestCase;
 

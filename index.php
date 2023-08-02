@@ -1,5 +1,5 @@
 <?php 
-require_once('src/collectioncardmaker.php');
+require_once('src/CollectionCardMaker.php');
 $db = new PDO('mysql:host=db;dbname=boardgames', 'root', 'password');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

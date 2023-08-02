@@ -3,7 +3,7 @@
 }
 
 html {
-	font-size: 20px; 
+	font-size: 20px;
 }
 
 body {
@@ -20,7 +20,7 @@ header {
 	color: white;
 }
 
-.container {
+.card-container {
     display: flex;
     flex-direction: column;
     align-items: center;

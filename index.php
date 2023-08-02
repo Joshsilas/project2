@@ -11,13 +11,13 @@ $boardgames = $query->fetchAll();
 <html lang="en-GB"> 
 	<head>
 		<link rel="stylesheet" type="text/css" href="src/style.css">
-		<title>The board game collection</title>
+		<title>The boardgame collection</title>
 	</head>
 	<body>
         <header>
             <h1>Boardgame Collection</h1>
         </header>
-		<div class = "container">
+		<div class = "card-container">
 			<?php
 			foreach ($boardgames as $boardgame){
 				$collectionCardMaker = new CollectionCardMaker($boardgame['name'], $boardgame['playercount'], $boardgame['difficulty'], $boardgame['description']);

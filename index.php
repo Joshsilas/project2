@@ -26,9 +26,9 @@ array_push($boardGamesAsObjects, $game);
         </header>
 		<div class="card-container">
 			<?php
-			foreach ($boardGamesAsObjects as $boardGameAsObject) {
+				foreach ($boardGamesAsObjects as $boardGameAsObject) {
 				echo $boardGameAsObject->createGameCard();
-			}
+				}
 			?>
 		</div> 
 	</body>

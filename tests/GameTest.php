@@ -16,10 +16,10 @@ class GameTest extends TestCase {
     $game = new Game($name, $playerCount, $difficulty, $description);
     $expectedResult = 
         '<section class="board-game-section"> 		
-            <h2>' . 'wow' . '</h2> 
-            <p>The player count is ' . '2 - 4' . ' players</p> 
-            <p>The difficulty to learn is ' . '2' . '/5</p>
-            <p>' . 'blah' . '</p>
+            <h2>wow</h2> 
+            <p>The player count is 2 - 4 players</p> 
+            <p>The difficulty to learn is 2/5</p>
+            <p>blah</p>
         </section>';
 
     $actualResult = $game->createGameCard();

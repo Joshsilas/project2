@@ -1,13 +1,13 @@
 * {
-	box-sizing: border-box; 
+    box-sizing: border-box; 
 }
 
 html {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 body {
-	background-color: #10651b;
+    background-color: #10651b;
     margin: 0px;
 }
 
@@ -15,9 +15,9 @@ header {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-	background-color: #0f2a1d;
-	border: 3px solid black;
-	color: white;
+    background-color: #0f2a1d;
+    border: 3px solid black;
+    color: white;
 }
 
 .card-container {
@@ -32,8 +32,8 @@ header {
     flex-direction: column;
     align-items: center;
     padding:20px;
-	background-color: #052514;
-	width: 70%;
-	border: 3px solid black;
-	color: white;
+    background-color: #052514;
+    width: 70%;
+    border: 3px solid black;
+    color: white;
 }
